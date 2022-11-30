@@ -65,18 +65,13 @@ function Main:NewFrame(Title)
 	    UIListLayout.Padding = UDim.new(0, 10)
 
         -- Scripts:
-
-    coroutine.wrap(WAKA_fake_script)()
-    local function XVRNLM_fake_script() -- yes.LocalScript 
 	    local script = Instance.new('LocalScript', yes)
 
 	    local ui = script.Parent.BTNToggle.state
 	
 	    ui.BackgroundColor = BrickColor.new("Really red")
 	    ui.BorderColor = BrickColor.new("Really red")
-    end
-    coroutine.wrap(LPXDS_fake_script)()
-        local function JOJYAND_fake_script() -- yes.LocalScript 
+
 	    local script = Instance.new('LocalScript', yes)
 
 	    local yes = script.Parent
@@ -89,11 +84,7 @@ function Main:NewFrame(Title)
 	    wait(0.2)
 	    print("finished")
 	    yes.Visible = true
-	
-	
-    end
-    coroutine.wrap(JOJYAND_fake_script)()
-    local function YFVF_fake_script() -- yes.LocalScript 
+
 	    local script = Instance.new('LocalScript', yes)
 
 	    local ye = script.Parent.UIListLayout
@@ -101,9 +92,7 @@ function Main:NewFrame(Title)
 	    ye.HorizontalAlignment = Enum.HorizontalAlignment.Center
 	    ye.SortOrder = Enum.SortOrder.LayoutOrder
 	    ye.Padding = UDim.new(0, 10)
-    end
-    coroutine.wrap(YFVF_fake_script)()
-    local function RUUFNN_fake_script() -- MiniBTN.Mini 
+	
 	    local script = Instance.new('LocalScript', MiniBTN)
 
 	    local yes = script.Parent.Parent.yes
@@ -150,9 +139,7 @@ function Main:NewFrame(Title)
 	end)
 		
 	
-    end
-    coroutine.wrap(RUUFNN_fake_script)()
-    local function UNJDTG_fake_script() -- main.LocalScript 
+    end 
 	    local script = Instance.new('LocalScript', main)
 
 	    local p = script.Parent
@@ -160,7 +147,6 @@ function Main:NewFrame(Title)
 	    p.Active = true
 	    p.Draggable = true
     end
-    coroutine.wrap(UNJDTG_fake_script)()
 
 	
 	Frame = {}
@@ -209,8 +195,6 @@ function Main:NewFrame(Title)
         TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
         TextButton_2.TextSize = 14.000
 		
-    coroutine.wrap(XVRNLM_fake_script)()
-    local function LPXDS_fake_script() -- toggle.LocalScript 
 	    local script = Instance.new('LocalScript', toggle)
 
 	    local BTN = script.Parent.Parent.state
@@ -247,7 +231,6 @@ function Main:NewFrame(Title)
 		    end
 	
 	    end)
-    end
 		
 		tle.MouseButton1Click:Connect(function()
 			
@@ -315,7 +298,6 @@ function Main:NewFrame(Title)
         Title.TextColor3 = Color3.fromRGB(255, 255, 255)
         Title.TextSize = 14.000
 
-		local function WAKA_fake_script() -- TextButton.LocalScript 
             local script = Instance.new('LocalScript', TextButton)
         
             local BTN = script.Parent.Parent.Parent.BTN
@@ -362,8 +344,6 @@ function Main:NewFrame(Title)
                 end
                 
             end)
-            
-        end
 		
 		TextButton.MouseButton1Click:Connect(function()
 			

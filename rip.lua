@@ -1,6 +1,6 @@
 Main = {}
 
-function Main:New(Title)
+function Main:NewFrame(Title)
 	
 	local ScreenGui = Instance.new("ScreenGui")
         local main = Instance.new("Frame")
@@ -152,7 +152,7 @@ function Main:New(Title)
 	
     end
     coroutine.wrap(RUUFNN_fake_script)()
-    ocal function UNJDTG_fake_script() -- main.LocalScript 
+    local function UNJDTG_fake_script() -- main.LocalScript 
 	    local script = Instance.new('LocalScript', main)
 
 	    local p = script.Parent
@@ -172,7 +172,7 @@ function Main:New(Title)
         local state = Instance.new("TextLabel")
         local TextButton_2 = Instance.new("TextButton")
 
-		BTNToggle.Name = "BTNToggle"
+	BTNToggle.Name = "BTNToggle"
         BTNToggle.Parent = yes
         BTNToggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         BTNToggle.BackgroundTransparency = 1.000
@@ -249,7 +249,7 @@ function Main:New(Title)
 	    end)
     end
 		
-		TextButton_2.MouseButton1Click:Connect(function()
+		tle.MouseButton1Click:Connect(function()
 			
 			pcall(Call)
 			

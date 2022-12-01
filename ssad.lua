@@ -5,7 +5,7 @@ local Mouse = LocalPlayer:GetMouse()
 
 local TweenService = game:GetService("TweenService")
 return {
-    CreateLib = function(GuiName)
+    NewLib = function(GuiName)
         local ScreenGui = Instance.new("ScreenGui")
         local main = Instance.new("Frame")
         local UICorner = Instance.new("UICorner")

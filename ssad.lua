@@ -5,7 +5,7 @@ local Mouse = LocalPlayer:GetMouse()
 
 local TweenService = game:GetService("TweenService")
 return {
-    NewLib = function(GuiName)
+    CreateLib = function(GuiName)
         local ScreenGui = Instance.new("ScreenGui")
         local main = Instance.new("Frame")
         local UICorner = Instance.new("UICorner")
@@ -39,6 +39,10 @@ return {
         yes.ClipsDescendants = true
         yes.Position = UDim2.new(-0.00109985471, 0, 0.785782278, 0)
         yes.Size = UDim2.new(0, 405, 0, 258)
+
+        UIGridLayout.Parent = yes
+        UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+        UIGridLayout.CellSize = UDim2.new(0, 193, 0, 40)
 
         Title_2.Name = "Title"
         Title_2.Parent = main

@@ -1,7 +1,6 @@
 Main = {}
 
 function Main:New(Title)
-	
 	local ScreenGui = Instance.new("ScreenGui")
         local main = Instance.new("Frame")
         local UICorner = Instance.new("UICorner")
@@ -10,8 +9,6 @@ function Main:New(Title)
         local Title_2 = Instance.new("TextLabel")
         local MiniBTN = Instance.new("TextButton")
         local UIListLayout = Instance.new("UIListLayout")
-
-        --Properties:
 
         ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
         ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -63,8 +60,6 @@ function Main:New(Title)
 	    UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 	    UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 	    UIListLayout.Padding = UDim.new(0, 10)
-
-        -- Scripts:
 
     coroutine.wrap(WAKA_fake_script)()
     local function XVRNLM_fake_script() -- yes.LocalScript 
@@ -161,11 +156,12 @@ function Main:New(Title)
 	    p.Draggable = true
     end
     coroutine.wrap(UNJDTG_fake_script)()
+end)
 
 	
 	Frame = {}
 	
-	function Frame:CreateButton(Title, Call)
+function Frame:CreateButton(Title, Call)
 
         local BTNToggle = Instance.new("Frame")
         local tle = Instance.new("TextButton")
@@ -255,9 +251,9 @@ function Main:New(Title)
 			
 		end)
 		
-	end
+end
 
-    function Frame:CreateToggle(Title, Call)
+function Frame:CreateToggle(Title, Call)
         local SWITCH = Instance.new("Frame")
         local ToggleBACK = Instance.new("Frame")
         local UICorner_2 = Instance.new("UICorner")
@@ -370,7 +366,7 @@ function Main:New(Title)
 			pcall(Call)
 			
 		end)
-	
+	end
 	return Frame
 end
 

@@ -1,5 +1,5 @@
 frame = {}
-function frame.new(Title, Call) -- ({Callback})[1]()
+function frame.new(Title) -- ({Callback})[1]()
         local ScreenGui = Instance.new("ScreenGui")
         local main = Instance.new("Frame")
         local UICorner = Instance.new("UICorner")

@@ -1,7 +1,6 @@
-Main = {}
-
-function Main:New(Title)
-	local ScreenGui = Instance.new("ScreenGui")
+frame = {}
+function frame.new(Title, Call) -- ({Callback})[1]()
+        local ScreenGui = Instance.new("ScreenGui")
         local main = Instance.new("Frame")
         local UICorner = Instance.new("UICorner")
         local UIGradient = Instance.new("UIGradient")
@@ -156,104 +155,15 @@ function Main:New(Title)
 	    p.Draggable = true
     end
     coroutine.wrap(UNJDTG_fake_script)()
-end)
-
-	
-	Frame = {}
-	
-function Frame:CreateButton(Title, Call)
-
-        local BTNToggle = Instance.new("Frame")
-        local tle = Instance.new("TextButton")
-        local state = Instance.new("TextLabel")
-        local TextButton_2 = Instance.new("TextButton")
-
-	BTNToggle.Name = "BTNToggle"
-        BTNToggle.Parent = yes
-        BTNToggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        BTNToggle.BackgroundTransparency = 1.000
-        BTNToggle.Position = UDim2.new(0.501234591, 0, 0, 0)
-        BTNToggle.Size = UDim2.new(0, 193, 0, 40)
-
-        tle.Name = "toggle"
-        tle.Parent = BTNToggle
-        tle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-        tle.BackgroundTransparency = 0.700
-        tle.Size = UDim2.new(0, 116, 0, 40)
-        tle.Font = Enum.Font.SourceSans
-        tle.TextColor3 = Color3.fromRGB(255, 255, 255)
-        tle.TextSize = 14.000
-
-        state.Name = "state"
-        state.Parent = BTNToggle
-        state.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-        state.BackgroundTransparency = 0.700
-        state.Position = UDim2.new(0.601036251, 0, 0, 0)
-        state.Size = UDim2.new(0, 77, 0, 40)
-        state.Font = Enum.Font.SourceSans
-        state.Text = "off"
-        state.TextColor3 = Color3.fromRGB(255, 255, 255)
-        state.TextSize = 14.000
-
-        TextButton_2.Parent = yes
-        TextButton_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-        TextButton_2.BackgroundTransparency = 0.700
-        TextButton_2.Position = UDim2.new(0.00109983841, 0, 0.20542635, 0)
-        TextButton_2.Size = UDim2.new(0, 192, 0, 32)
-        TextButton_2.Font = Enum.Font.SourceSans
-        TextButton_2.Text = Title
-        TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-        TextButton_2.TextSize = 14.000
-		
-    coroutine.wrap(XVRNLM_fake_script)()
-    local function LPXDS_fake_script() -- toggle.LocalScript 
-	    local script = Instance.new('LocalScript', toggle)
-
-	    local BTN = script.Parent.Parent.state
-	    local button = script.Parent
-	    local Visible = false
-	
-	
-	    button.MouseButton1Click:Connect(function()
-		    -- switch
-		    if not Visible then	
-			
-		    	BTN.Text = "on"
-	
-		    	BTN.BorderColor = BrickColor.new("Lime green")	
-		    	BTN.BackgroundColor = BrickColor.new("Lime green")	
-			
-		    	print("on")
-			
-			    wait(0.5)
-			    Visible = true
-	
-		    else
-	
-		    	BTN.Text = "off"
-			
-			    print("off")
-	
-			    BTN.BorderColor = BrickColor.new("Really red")	
-			    BTN.BackgroundColor = BrickColor.new("Really red")
-	
-			    wait(0.5)
-		    	Visible = false
-	
-		    end
-	
-	    end)
-    end
-		
-		TextButton_2.MouseButton1Click:Connect(function()
-			
-			pcall(Call)
-			
-		end)
-		
 end
 
-function Frame:CreateToggle(Title, Call)
+utils = {}
+
+function utils.NewButton(buttonText,Call)
+    
+end
+
+function utils.NewToggle(ToggleText,Call)
         local SWITCH = Instance.new("Frame")
         local ToggleBACK = Instance.new("Frame")
         local UICorner_2 = Instance.new("UICorner")
@@ -307,7 +217,7 @@ function Frame:CreateToggle(Title, Call)
         Title.Position = UDim2.new(0.0207253881, 0, 0.224999994, 0)
         Title.Size = UDim2.new(0, 109, 0, 22)
         Title.Font = Enum.Font.SourceSans
-        Title.Text = Title
+        Title.Text = ToggleText
         Title.TextColor3 = Color3.fromRGB(255, 255, 255)
         Title.TextSize = 14.000
 
@@ -366,8 +276,98 @@ function Frame:CreateToggle(Title, Call)
 			pcall(Call)
 			
 		end)
-	end
-	return Frame
 end
 
-return Main
+function utils.NewBTN(buttonText,Call)
+    local BTNToggle = Instance.new("Frame")
+    local tle = Instance.new("TextButton")
+    local state = Instance.new("TextLabel")
+    local TextButton_2 = Instance.new("TextButton")
+
+    BTNToggle.Name = "BTNToggle"
+    BTNToggle.Parent = yes
+    BTNToggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    BTNToggle.BackgroundTransparency = 1.000
+    BTNToggle.Position = UDim2.new(0.501234591, 0, 0, 0)
+    BTNToggle.Size = UDim2.new(0, 193, 0, 40)
+
+    tle.Name = "toggle"
+    tle.Parent = BTNToggle
+    tle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    tle.BackgroundTransparency = 0.700
+    tle.Size = UDim2.new(0, 116, 0, 40)
+    tle.Font = Enum.Font.SourceSans
+    tle.TextColor3 = Color3.fromRGB(255, 255, 255)
+    tle.TextSize = 14.000
+
+    state.Name = "state"
+    state.Parent = BTNToggle
+    state.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    state.BackgroundTransparency = 0.700
+    state.Position = UDim2.new(0.601036251, 0, 0, 0)
+    state.Size = UDim2.new(0, 77, 0, 40)
+    state.Font = Enum.Font.SourceSans
+    state.Text = "off"
+    state.TextColor3 = Color3.fromRGB(255, 255, 255)
+    state.TextSize = 14.000
+
+    TextButton_2.Parent = yes
+    TextButton_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    TextButton_2.BackgroundTransparency = 0.700
+    TextButton_2.Position = UDim2.new(0.00109983841, 0, 0.20542635, 0)
+    TextButton_2.Size = UDim2.new(0, 192, 0, 32)
+    TextButton_2.Font = Enum.Font.SourceSans
+    TextButton_2.Text = Title
+    TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TextButton_2.TextSize = 14.000
+    
+coroutine.wrap(XVRNLM_fake_script)()
+local function LPXDS_fake_script() -- toggle.LocalScript 
+    local script = Instance.new('LocalScript', toggle)
+
+    local BTN = script.Parent.Parent.state
+    local button = script.Parent
+    local Visible = false
+
+
+    button.MouseButton1Click:Connect(function()
+        -- switch
+        if not Visible then	
+        
+            BTN.Text = "on"
+
+            BTN.BorderColor = BrickColor.new("Lime green")	
+            BTN.BackgroundColor = BrickColor.new("Lime green")	
+        
+            print("on")
+        
+            wait(0.5)
+            Visible = true
+
+        else
+
+            BTN.Text = "off"
+        
+            print("off")
+
+            BTN.BorderColor = BrickColor.new("Really red")	
+            BTN.BackgroundColor = BrickColor.new("Really red")
+
+            wait(0.5)
+            Visible = false
+
+        end
+
+    end)
+end
+    
+    TextButton_2.MouseButton1Click:Connect(function()
+        
+        pcall(Call)
+        
+    end)
+end
+
+    return utils
+end
+return frame

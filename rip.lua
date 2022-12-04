@@ -146,7 +146,7 @@ function frame.new(Title) -- ({Callback})[1]()
 	
     end
     coroutine.wrap(RUUFNN_fake_script)()
-    ocal function UNJDTG_fake_script() -- main.LocalScript 
+    local function UNJDTG_fake_script() -- main.LocalScript 
 	    local script = Instance.new('LocalScript', main)
 
 	    local p = script.Parent
